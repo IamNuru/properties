@@ -76,7 +76,7 @@ const AuthState = (props) => {
     console.log(data)
     updateProfile(data, {
       displayName: data.fullName,
-    }).then(() => {
+    }).then( async() => {
       let docRef = collection(db, "users");
       let q = query(docRef, where("uid", "==", data.uid));
       await getDocs(q).then((querySnapshot) =>{
