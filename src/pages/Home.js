@@ -5,7 +5,7 @@ const Home = () => {
     <section className="relative  bg-blueGray-50">
       <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
         <div
-          className="absolute top-0 w-full h-full bg-center bg-cover"
+          className="absolute top-0 w-full h-full bg-center bg-cover object-cover"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80')"
           }}
