@@ -1,0 +1,24 @@
+export const REGISTER = "REGISTER"
+export const LOGIN = "LOGIN"
+export const LOGOUT = "LOGOUT"
+export const ERRORS = "ERRORS"
+export const GET_USER = "GET_USER"
+export const GET_USER_PROFILE = "GET_USER_PROFILE"
+export const SUCCESS_MESSAGES = "SUCCESS_MESSAGES"
+export const SET_lOADING = "SET_lOADING"
+export const UPDATE_USER = "UPDATE_USER"
+
+//
+export const GET_PROPERTY = "GET_PROPERTY"
+export const GET_PROPERTIES = "GET_PROPERTIES"
+export const SET_PROPERTY_TO_NULL = "SET_PROPERTY_TO_NULL"
+//
+export const GET_TRANSFER = "GET_TRANSFER"
+export const GET_TRANSFERS = "GET_TRANSFERS"
+export const SET_TRANSFER_TO_NULL = "SET_TRANSFER_TO_NULL"
+
+export const GET_RECIPIENT = "GET_RECIPIENT"
+export const SET_RECEPIENT_TO_NULL = "SET_RECIPIENT_TO_NULL"
+
+//
+
