@@ -70,7 +70,7 @@ const PropertyDetails = () => {
                       </button>
                     <Link
                       to={`/edit-property/${id}`}
-                      className="md:ml-auto bg-green-500 hover:bg-green-700 text-white font-semibold px-4 py-1 rounded-xs text-md"
+                      className="bg-green-500 hover:bg-green-700 text-white font-medium px-4 py-1 rounded-xs text-md"
                     >
                       Edit
                     </Link>

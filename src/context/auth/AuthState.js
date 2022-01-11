@@ -70,11 +70,13 @@ const AuthState = (props) => {
   signInWithPopup(auth, Gprovider)
   .then((result) => {
     let data = result.user;
+    console.log(data)
     updateProfile(data, {
       displayName: data.fullName,
     }).then(() => {
       let docRef = collection(db, "users");
       let q = query(docRef, where("uid", "==", data.uid));
+      console.log(q)
       if(!q){
         addDoc(usersCollectionRef, {
           phoneNumber: data.phoneNumber,
@@ -131,8 +133,12 @@ const AuthState = (props) => {
   };
 
   const getUserProfile = async (uid) =>{
+    console.log("user profile")
     let docRef = collection(db, "users");
+    console.log("user profile1")
     let q = query(docRef, where("uid", "==", uid));
+    console.log("user profile2")
+    console.log("user profile2")
     let querySnapshot = await getDocs(q)
     querySnapshot.forEach((doc) => {
       dispatch({
