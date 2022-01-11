@@ -105,7 +105,8 @@ const Login = () => {
                 Log in
               </button>
             </div>
-            <div className="flex flex-col space-y-5">
+          </form>
+          <div className="flex flex-col space-y-5">
               <span className="flex items-center justify-center space-x-2">
                 <span className="h-px bg-gray-400 w-14"></span>
                 <span className="font-normal text-gray-500">or login with</span>
@@ -147,7 +148,6 @@ const Login = () => {
               </button>
             </div>
             </div>
-          </form>
           <p className="flex flex-col items-center justify-center mt-10 text-center">
             <span>Don't have an account?</span>
             <Link to="/signup" className="underline">
