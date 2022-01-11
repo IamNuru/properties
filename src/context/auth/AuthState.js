@@ -75,7 +75,9 @@ const AuthState = (props) => {
       let docRef = collection(db, "users");
       let q = query(docRef, where("uid", "==", data.uid));
       getDocs(q).then((querySnapshot) =>{
-      if (querySnapshot.docs.length < 1) {
+      if (querySnapshot.docs.length > 1) {
+        
+      }else{
         addDoc(usersCollectionRef, {
           phoneNumber: data.phoneNumber,
           uid: auth.currentUser.uid,
@@ -86,7 +88,6 @@ const AuthState = (props) => {
     });
   }).catch((error) => {
     console.log(error)
-
   });
   }
 
