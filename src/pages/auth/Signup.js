@@ -72,7 +72,7 @@ const Signup = () => {
         <div className="font-medium self-center text-xl sm:text-3xl text-gray-800">
           Create an Account
         </div>
-        <div className="mt-4 self-center text-xl sm:text-sm text-gray-800">
+        <div className="mt-4 self-center text-xl sm:text-sm text-gray-800 text-center">
           Enter your credentials to create an account
         </div>
         {error !== null && error !== "" && (

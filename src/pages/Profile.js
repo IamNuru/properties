@@ -201,10 +201,10 @@ const Profile = () => {
                                 Gender
                               </div>
                               <div className="px-4 py-2">
-                                <label>
+                                <label className="px-2">
                                     <input type="radio" name="gender" value="m" onChange={onChange} checked={gender === "m"} />Male
                                 </label>
-                                <label>
+                                <label className="px-2">
                                     <input type="radio" name="gender" value="f" onChange={onChange} checked={gender === "f"} />Female
                                 </label>
                               </div>

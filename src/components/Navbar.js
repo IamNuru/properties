@@ -7,17 +7,16 @@ import LogoSvg from "./LogoSvg";
 const Navbar = () => {
   const location = useLocation()
   const { logout, user } = useContext(AuthContext);
-  const [openNavbar, setOpenNavbar] = useState(true);
+  const [openNavbar, setOpenNavbar] = useState(false);
 
   useEffect(() => {
-    setOpenNavbar(false)
     window.scrollTo(0,0)
   }, [location])
 
   return (
     <>
       {/* Navbar for smaller screen  */}
-      <nav className="sm:hidden fixed top-0 bottom-0 left-0 w-full z-50">
+      <nav className="sm:hidden h-fit fixed top-0 bottom-0 left-0 w-full z-50">
         <div className="bg-gray-800">
           <div className="w-full bg-gray-900 pt-2 pb-4 px-2 flex justify-between">
             <div className="text-indigo-500">
@@ -27,7 +26,7 @@ const Navbar = () => {
             </div>
             <div className="btn">
               <button
-                className="text-white"
+                className="text-white hove:outline-none outline-none"
                 onClick={() => setOpenNavbar(!openNavbar)}
               >
                 <i className={`fa ${openNavbar ? 'fa-times':'fa-bars'} fa-2x`}></i>
@@ -51,7 +50,7 @@ const Navbar = () => {
                   </>
                 )}
               </ul>
-            <div className="block mt-auto">
+            <div className="block mt-auto mb-4">
               {!user ? (
                 <div className="flex flex-col">
                   <Link

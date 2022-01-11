@@ -54,7 +54,7 @@ const Login = () => {
           </Link>
         </div>
         <div className="p-5 bg-white">
-          <h3 className="my-4 text-2xl font-semibold text-gray-700">
+          <h3 className="mb-4 text-2xl font-medium text-gray-700 text-center">
             Account Login
           </h3>
           { error && <p className="text-red-400 font-lighter text-sm text-center mb-4">
