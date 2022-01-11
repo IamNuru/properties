@@ -70,16 +70,11 @@ const AuthState = (props) => {
   //signup with email
   const signUpWithEmail = () =>{
     
-  signInWithPopup(auth, Gprovider)
-  .then((result) => {
-    let data = result.user;
-    console.log(data)
-    updateProfile(data, {
-      displayName: data.fullName,
-    }).then( async() => {
+  signInWithPopup(auth, Gprovider).then((result) => {
+      let data = result.user;   
       let docRef = collection(db, "users");
       let q = query(docRef, where("uid", "==", data.uid));
-      await getDocs(q).then((querySnapshot) =>{
+      getDocs(q).then((querySnapshot) =>{
       if (querySnapshot.docs.length < 1) {
         addDoc(usersCollectionRef, {
           phoneNumber: data.phoneNumber,
