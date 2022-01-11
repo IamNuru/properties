@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { auth, db } from "../../config/Firebase";
 import { addDoc, collection, query, where, doc, updateDoc, getDocs } from "firebase/firestore";
 import {
@@ -13,6 +14,7 @@ import AuthContext from "./AuthContext";
 
 //import variables from types
 import {SET_lOADING, GET_RECIPIENT, GET_USER, SET_RECEPIENT_TO_NULL, ERRORS, GET_USER_PROFILE, SUCCESS_MESSAGES } from "../../types";
+import { Navigate } from "react-router-dom";
 
 const AuthState = (props) => {
   const initialState = {
@@ -25,6 +27,7 @@ const AuthState = (props) => {
     recipient: null,
   };
   const [state, dispatch] = useReducer(AuthReducer, initialState);
+  const navigate = useNavigate();
   const usersCollectionRef = collection(db, "users");
   const Gprovider = new GoogleAuthProvider();
   const Fprovider = new FacebookAuthProvider();
@@ -76,8 +79,8 @@ const AuthState = (props) => {
     }).then(() => {
       let docRef = collection(db, "users");
       let q = query(docRef, where("uid", "==", data.uid));
-      console.log(q)
-      if(!q){
+      await getDocs(q).then((querySnapshot) =>{
+      if (querySnapshot.docs.length < 1) {
         addDoc(usersCollectionRef, {
           phoneNumber: data.phoneNumber,
           uid: auth.currentUser.uid,
@@ -133,12 +136,8 @@ const AuthState = (props) => {
   };
 
   const getUserProfile = async (uid) =>{
-    console.log("user profile")
     let docRef = collection(db, "users");
-    console.log("user profile1")
     let q = query(docRef, where("uid", "==", uid));
-    console.log("user profile2")
-    console.log("user profile2")
     let querySnapshot = await getDocs(q)
     querySnapshot.forEach((doc) => {
       dispatch({
@@ -162,7 +161,9 @@ const AuthState = (props) => {
   //log user out
   const logout = () => {
     signOut(auth)
-      .then(() => {})
+      .then(() => {
+        Navigate("/")
+      })
       .catch((error) => {});
   };
 
