@@ -23,7 +23,7 @@ const Profile = () => {
     gender: "",
     ProfileURL:"",
   });
-  const { displayName, address, phoneNumber, biography, gender, ProfileURL, setSuccessToNull } = data;
+  const { displayName, address, phoneNumber, biography, gender, ProfileURL } = data;
 
   useEffect(() => {
     if (user) {
