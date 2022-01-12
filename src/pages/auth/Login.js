@@ -129,7 +129,7 @@ const Login = () => {
                   Login with google
                 </span>
               </button>
-              <button onClick={() => signUpWithFacebook()} className="flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-blue-500 rounded-md group hover:bg-blue-500 focus:outline-none">
+              <button onClick={() => signUpWithFacebook()} className="hidden flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-blue-500 rounded-md group hover:bg-blue-500 focus:outline-none">
                 <span>
                   <svg
                     className="text-blue-500 group-hover:text-white"

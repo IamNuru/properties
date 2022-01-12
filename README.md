@@ -5,7 +5,7 @@ This project was a test project for online property management. It help property
 The live demo can be found [here](https://properties-management.netlify.app).
 
 ## Stack used
-The project was developed using [reactjs](https://reactjs.org), for frontend [tailwindCss](https://tailwindcss.com) for styling and [firebase](https://firebase.google.com) as the the backend
+The project was developed using [reactjs](https://reactjs.org) for frontent, [tailwindCss](https://tailwindcss.com) for styling and [firebase](https://firebase.google.com) as the the backend
 
 ## Available Scripts
 
