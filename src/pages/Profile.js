@@ -21,9 +21,9 @@ const Profile = () => {
     phoneNumber: "",
     biography: "",
     gender: "",
-    ProfileURL:"",
+    photoURL:"",
   });
-  const { displayName, address, phoneNumber, biography, gender, ProfileURL } = data;
+  const { displayName, address, phoneNumber, biography, gender, photoURL } = data;
 
   useEffect(() => {
     if (user) {
@@ -49,7 +49,7 @@ const Profile = () => {
         phoneNumber: profile?.phoneNumber ? profile.phoneNumber : "",
         biography: profile?.biography ? profile.biography : "",
         gender: profile?.gender ? profile.gender : "",
-        ProfileURL: profile?.ProfileURL ? profile.ProfileURL : "",
+        photoURL: profile?.photoURL ? profile.photoURL : "",
       });
     }
   }, [profile]);
@@ -98,7 +98,7 @@ const Profile = () => {
                   <div className="w-full md:w-3/12 md:mx-2">
                     <div className="bg-white p-3 border-t-4 border-green-400">
                       <div className="image overflow-hidden max-w-sm bg-cover mx-auto border border-gray-300 h-48">
-                        {user?.profileURL ? (
+                        {user?.photoURL ? (
                           <img
                             className="h-full w-full mx-auto"
                             src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
@@ -267,14 +267,14 @@ const Profile = () => {
                               </div>
                             </div>
                             <div className="grid lg:grid-cols-2">
-                              <div className="lg:px-4 py-2 font-semibold"> ProfileURL</div>
+                              <div className="lg:px-4 py-2 font-semibold"> photoURL</div>
                               <div className="">
                                 <input
                                   type="url"
                                   autoComplete="new-password"
                                   className="w-full px-2 py-1 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
-                                  name="ProfileURL"
-                                  value={ProfileURL}
+                                  name="photoURL"
+                                  value={photoURL}
                                   onChange={onChange}
                                 />
                               </div>
