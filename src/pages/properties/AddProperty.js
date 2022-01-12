@@ -31,9 +31,17 @@ const AddProperty = () => {
     return () => {
       setSuccessToNull()
     }
-
     //eslint-disable-next-line
   }, [])
+
+  React.useEffect(() =>{
+    if(success){
+        setProperty({
+            title:"", description:"", photoURL:""
+        })
+    }
+  //eslint-disable-next-line
+  },[success])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -73,7 +81,7 @@ const AddProperty = () => {
               <br />
               <input
                 type="text"
-                className="border-2 border-gray-300 p-2 w-full"
+                className="w-full px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                 name="title"
                 value={title}
                 onChange={onChange}
@@ -88,7 +96,7 @@ const AddProperty = () => {
               </label>
               <br />
               <textarea
-                className="border-2 border-gray-500 w-full min-h-max"
+                className="w-full px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                 name="description"
                 value={description}
                 onChange={onChange}
@@ -101,7 +109,7 @@ const AddProperty = () => {
               <br />
               <input
                 type="url"
-                className="border-2 border-gray-300 p-2 w-full"
+                className="w-full px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                 name="photoURL"
                 value={photoURL}
                 onChange={onChange}

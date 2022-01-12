@@ -69,14 +69,15 @@ const AuthState = (props) => {
 
   //signup with email
   const signUpWithEmail = () =>{
-    
+    setLoading(true)
   signInWithPopup(auth, Gprovider).then((result) => {
       let data = result.user;   
       let docRef = collection(db, "users");
       let q = query(docRef, where("uid", "==", data.uid));
       getDocs(q).then((querySnapshot) =>{
-      if (querySnapshot.docs.length > 1) {
-        
+        console.log(querySnapshot)
+      if (querySnapshot.docs.length > 0) {
+        return false;
       }else{
         addDoc(usersCollectionRef, {
           phoneNumber: data.phoneNumber,
@@ -87,7 +88,7 @@ const AuthState = (props) => {
       }
     });
   }).catch((error) => {
-    console.log(error)
+    setLoading(false)
   });
   }
 

@@ -56,7 +56,8 @@ const Home = () => {
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                 <div className="px-4 py-5 flex-auto">
                   <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                    <i className="fas fa-award"></i>
+                   
+                    <i className="fa fa-building-o fa-2x"></i>
                   </div>
                   <h6 className="text-xl font-semibold">Property Listing</h6>
                   <p className="mt-2 mb-4 text-blueGray-500">
@@ -69,7 +70,7 @@ const Home = () => {
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                 <div className="px-4 py-5 flex-auto">
                   <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
-                    <i className="fas fa-retweet"></i>
+                  <i className="fa fa-handshake-o fa-2x text-blue-500"></i>
                   </div>
                   <h6 className="text-xl font-semibold">Lease Agreements</h6>
                   <p className="mt-2 mb-4 text-blueGray-500">
@@ -82,7 +83,7 @@ const Home = () => {
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                 <div className="px-4 py-5 flex-auto">
                   <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                    <i className="fas fa-fingerprint"></i>
+                  <i className="fa fa-money fa-2x"></i>
                   </div>
                   <h6 className="text-xl font-semibold">Deposit Management</h6>
                   <p className="mt-2 mb-4 text-blueGray-500">

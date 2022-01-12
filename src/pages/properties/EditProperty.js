@@ -30,14 +30,15 @@ const EditProperty = () => {
 
 
     React.useEffect(() => {
-        
           getProperty(id);
         return () => {
             setPropertyToNull()
         }
-
     //eslint-disable-next-line
     }, [id])
+
+    
+
 
     const onChange = e =>{
         setData({ ...data, [e.target.name]: e.target.value})
@@ -61,6 +62,7 @@ const EditProperty = () => {
         }
 
         await updateProperty(data, id)
+        setData("")
 
     }
 
@@ -74,14 +76,16 @@ const EditProperty = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
                             <label className="text-xl text-gray-600">Title <span className="text-red-500">*</span></label><br />
-                            <input type="text" className="border-2 border-gray-300 p-2 w-full" 
+                            <input 
+                                type="text" 
+                                className="w-full px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                                 name="title" value={title} onChange={onChange} required minLength={5} maxLength={75}/>
                         </div>
 
                         <div className="mb-4">
                             <label className="text-xl text-gray-600">Description<span className="text-red-500">*</span></label><br />
                             <textarea 
-                                className="border-2 border-gray-500 w-full min-h-max"
+                                className="w-full px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                                 name="description" 
                                 value={description} 
                                 onChange={onChange}
@@ -91,7 +95,8 @@ const EditProperty = () => {
 
                         <div className="mb-4">
                             <label className="text-xl text-gray-600">photoURL</label><br />
-                            <input type="url" className="border-2 border-gray-300 p-2 w-full" 
+                            <input type="url" 
+                                className="w-full px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                                 name="photoURL" 
                                 value={photoURL} 
                                 onChange={onChange} />

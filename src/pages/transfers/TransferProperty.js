@@ -2,8 +2,8 @@ import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom"
 import AuthContext from "../../context/auth/AuthContext"
 import PropertyContext from "../../context/property/PropertyContext";
+import LoadingGear from "../../components/loaders/LoadingGear";
 import RecipientProfile from "../../components/RecipientProfile"
-import ScreenLoader from "../../components/ScreenLoader"
 import noPropertyImage from "../../images/no-property-image.png"
 
 const TransferProperty = () => {
@@ -61,7 +61,7 @@ const TransferProperty = () => {
     <div className="min-h-screen m-auto max-w-7xl">
       <div className="w-full max-w-4xl mx-auto">
         {loading ? (
-          <ScreenLoader />
+          <LoadingGear />
         ) : (
           <>
             {property !== null && Object.keys(property).length !== 0 ? (

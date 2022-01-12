@@ -69,7 +69,6 @@ const Login = () => {
               <input
                 type="email"
                 id="email"
-                autoFocus
                 className="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                 name="email"
                 onChange={onChange}
@@ -122,12 +121,12 @@ const Login = () => {
                     aria-hidden="true"
                   >
                     <path
-                      d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"
+                      d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
                     ></path>
                   </svg>
                 </span>
                 <span className="text-sm font-medium text-red-800 group-hover:text-white">
-                  Email
+                  Login with google
                 </span>
               </button>
               <button onClick={() => signUpWithFacebook()} className="flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-blue-500 rounded-md group hover:bg-blue-500 focus:outline-none">
@@ -143,7 +142,7 @@ const Login = () => {
                   </svg>
                 </span>
                 <span className="text-sm font-medium text-blue-500 group-hover:text-white">
-                  Facebook
+                  Login with facebook
                 </span>
               </button>
             </div>

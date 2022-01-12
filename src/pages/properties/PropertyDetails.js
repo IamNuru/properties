@@ -1,6 +1,6 @@
 import { useEffect, useContext } from "react";
 import { Link , useParams } from "react-router-dom";
-import ScreenLoader from "../../components/ScreenLoader";
+import LoadingGear from "../../components/loaders/LoadingGear";
 import PropertyContext from "../../context/property/PropertyContext"
 import noPropertyImage from "../../images/no-property-image.png"
 
@@ -32,7 +32,7 @@ const PropertyDetails = () => {
     <div className="m-auto min-h-screen max-w-7xl">
       <div className="w-full max-w-4xl mx-auto">
         {loading ? (
-          <ScreenLoader />
+          <LoadingGear />
         ) : (
           <>
             {property !== null && Object.keys(property).length !== 0 ? (

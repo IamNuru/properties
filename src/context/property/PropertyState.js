@@ -67,7 +67,7 @@ const PropertyState = (props) => {
     }).then(res =>{
       dispatch({
         type: SUCCESS_MESSAGES,
-        payload: "Property successfully added"
+        payload: "Property was successfully added"
       })
     }).catch((err) =>{
       dispatch({

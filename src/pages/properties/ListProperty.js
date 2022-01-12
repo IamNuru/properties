@@ -1,6 +1,6 @@
 import React from "react"
 import Property from "../../components/properties/Property";
-import ListPulse from "../../components/ListPulse";
+import ListPulse from "../../components/loaders/ListPulse";
 import PropertyContext from "../../context/property/PropertyContext";
 
 
@@ -38,7 +38,7 @@ const ListProperties = () => {
               }
             </> 
             : 
-            <div className="text-center flex justify-center">
+            <div className="text-center font-semibold text-lg flex items-center h-screen justify-center">
               <span>You have no properties yet</span>
             </div>
           }

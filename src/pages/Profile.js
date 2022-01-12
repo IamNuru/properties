@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import AuthContext from "../context/auth/AuthContext";
 import { Link } from "react-router-dom";
 import PropertyContext from "../context/property/PropertyContext";
-import ScreenLoader from "../components/ScreenLoader";
 import manProfile from "../images/man-profile.jpg"
 import womanProfile from "../images/woman-profile.jpg"
+import LoadingGear from "../components/loaders/LoadingGear";
 
 const Profile = () => {
   const { user, updateUserProfile, getUserProfile, profile, success, setSuccessToNull, loading, setLoading, errors, setError } =
@@ -23,7 +23,7 @@ const Profile = () => {
     gender: "",
     ProfileURL:"",
   });
-  const { displayName, address, phoneNumber, biography, gender, ProfileURL } = data;
+  const { displayName, address, phoneNumber, biography, gender, ProfileURL, setSuccessToNull } = data;
 
   useEffect(() => {
     if (user) {
@@ -33,8 +33,13 @@ const Profile = () => {
       getTransfers();
     }
 
+    return () =>{
+      setSuccessToNull()
+    }
+
     //eslint-disable-next-line
   }, [user]);
+
 
   useEffect(() => {
     if (profile) {
@@ -83,9 +88,7 @@ const Profile = () => {
   return (
     <div className="min-h-screen m-auto max-w-7xl mb-4">
       {loading ? (
-        <>
-          <ScreenLoader />
-        </>
+        <LoadingGear />
       ) : (
         <>
           {profile ? (
@@ -133,7 +136,7 @@ const Profile = () => {
                           profile.biography
                         ) : (
                           <span className="text-gray-400">
-                            No biographygraphy
+                            No biography
                           </span>
                         )}
                       </p>

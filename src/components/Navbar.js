@@ -35,7 +35,7 @@ const Navbar = () => {
             </div>
           </div>
           <div
-            className={`${openNavbar ? "w-full" : "w-0"} absolute flex flex-col flex-grow-1 top-16 h-screen bg-gray-800 text-white font-semibold text-lg overflow-hidden trans-w opacity-90 pb-8`}
+            className={`${openNavbar ? "w-full" : "w-0"} absolute flex flex-col flex-grow-1 top-16 h-screen bg-gray-800 text-white font-semibold text-lg overflow-hidden trans-w opacity-90 pb-16`}
           >
             <div className="px-3 flex flex-col" style={{height :'calc(100% - 4.5rem)'}}>
               <ul

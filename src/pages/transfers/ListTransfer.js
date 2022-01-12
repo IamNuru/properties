@@ -1,5 +1,5 @@
 import React from "react"
-import ListPulse from "../../components/ListPulse";
+import ListPulse from "../../components/loaders/ListPulse";
 import Transfer from "../../components/transfers/Transfer";
 import PropertyContext from "../../context/property/PropertyContext";
 
