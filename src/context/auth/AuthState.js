@@ -70,26 +70,27 @@ const AuthState = (props) => {
   //signup with email
   const signUpWithEmail = () =>{
     setLoading(true)
-  signInWithPopup(auth, Gprovider).then((result) => {
-      let data = result.user;   
-      let docRef = collection(db, "users");
-      let q = query(docRef, where("uid", "==", data.uid));
-      getDocs(q).then((querySnapshot) =>{
-        console.log(querySnapshot)
-      if (querySnapshot.docs.length > 0) {
-        return false;
-      }else{
-        addDoc(usersCollectionRef, {
-          phoneNumber: data.phoneNumber,
-          uid: auth.currentUser.uid,
-          email: auth.currentUser.email,
-          displayName: auth.currentUser.displayName,
-        });
-      }
+    signInWithPopup(auth, Gprovider).then((result) => {
+        let data = result.user;  
+        console.log(data) 
+        let docRef = collection(db, "users");
+        let q = query(docRef, where("uid", "==", data.uid));
+        getDocs(q).then((querySnapshot) =>{
+          console.log(querySnapshot)
+        if (querySnapshot.docs.length > 0) {
+          return false;
+        }else{
+          addDoc(usersCollectionRef, {
+            phoneNumber: data.phoneNumber,
+            uid: auth.currentUser.uid,
+            email: auth.currentUser.email,
+            displayName: auth.currentUser.displayName,
+          });
+        }
+      });
+    }).catch((error) => {
+      setLoading(false)
     });
-  }).catch((error) => {
-    setLoading(false)
-  });
   }
 
   //signup with facebook

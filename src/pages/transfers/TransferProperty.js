@@ -94,7 +94,6 @@ const TransferProperty = () => {
                       </label>
                       <input
                         type="email"
-                        autoFocus
                         autoComplete="new-password"
                         className="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                         name="email"
