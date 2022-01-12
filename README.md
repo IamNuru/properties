@@ -2,10 +2,10 @@
 
 This project was a test project for online property management. It help property owners transfer their properties and also keep track of all their properties nd transfers that they made.
 
-The live demo can be found [https://properties-management.netlify.app](here).
+The live demo can be found [here](https://properties-management.netlify.app).
 
 ## Stack used
-The project was developed using [https://reactjs.org](reactjs), for frontend [https://tailwindcss.com](tailwind css) for styling and [https://firebase.google.com](firebase) as the the backend
+The project was developed using [reactjs](https://reactjs.org), for frontend [tailwindCss](https://tailwindcss.com) for styling and [firebase](https://firebase.google.com) as the the backend
 
 ## Available Scripts
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <section className="relative  bg-blueGray-50">
+    <section className="relative  bg-blueGray-50 min-h-screen">
       <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
         <div
           className="absolute top-0 w-full h-full bg-center bg-cover object-cover"
