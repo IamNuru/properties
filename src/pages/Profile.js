@@ -101,7 +101,7 @@ const Profile = () => {
                         {user?.photoURL ? (
                           <img
                             className="h-full w-full mx-auto"
-                            src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
+                            src={`${user.photoURL}`}
                             alt=""
                           />
                         ) : (
