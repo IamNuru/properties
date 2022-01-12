@@ -56,7 +56,7 @@ const Navbar = () => {
                 <div className="flex flex-col">
                   <Link
                     to="/signup"
-                    className="my-2 font-md text-orange-500 hover:bg-orange-900 text-center"
+                    className="my-2 py-2 border-b border-gray-600 font-md text-orange-500 hover:bg-orange-900 text-center"
                   >
                     Sign up
                   </Link>

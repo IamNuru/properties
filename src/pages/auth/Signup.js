@@ -98,7 +98,7 @@ const Signup = () => {
                 <input
                   type="text"
                   name="fullName"
-                  className="pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                  className="w-full pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                   placeholder="Enter your full name"
                   value={fullName}
                   onChange={onChange}
@@ -121,7 +121,7 @@ const Signup = () => {
                 <input
                   type="email"
                   name="email"
-                  className="pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                  className="w-full pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                   placeholder="Enter your email"
                   value={email}
                   onChange={onChange}
@@ -143,7 +143,7 @@ const Signup = () => {
                 <input
                   type="text"
                   name="phoneNumber"
-                  className="pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                  className="w-full pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                   placeholder="Enter your cellphone Number"
                   value={phoneNumber}
                   onChange={onChange}
@@ -167,7 +167,7 @@ const Signup = () => {
                 <input
                   type="password"
                   name="password"
-                  className="pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                  className="w-full pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                   placeholder="Enter your password"
                   value={password}
                   onChange={onChange}
@@ -192,7 +192,7 @@ const Signup = () => {
                 <input
                   type="password"
                   name="password_confirmation"
-                  className="pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                  className="w-full pr-4 pl-10 py-2 placeholder-gray-500 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
                   placeholder="Confirm your password"
                   value={password_confirmation}
                   onChange={onChange}

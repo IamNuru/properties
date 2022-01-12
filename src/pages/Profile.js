@@ -190,9 +190,7 @@ const Profile = () => {
                               <div className="">
                                 <input
                                   type="text"
-                                  className="w-full border border-gray-150 py-1 focus:border
-                        focus:outline-none focus:border-sky-200 focus:ring-1 focus:ring-sky-500
-                        disabled:bg-gray-50 "
+                                  className="w-full px-2 py-1 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                                   name="displayName"
                                   value={displayName}
                                   onChange={onChange}
@@ -220,9 +218,7 @@ const Profile = () => {
                                 <input
                                   type="text"
                                   autoComplete="new-password"
-                                  className="w-full border border-gray-150 py-1 focus:border
-                                  focus:outline-none focus:border-sky-200 focus:ring-1 focus:ring-sky-500
-                                  disabled:bg-gray-50 "
+                                  className="w-full px-2 py-1 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                                   name="phoneNumber"
                                   value={phoneNumber}
                                   onChange={onChange}
@@ -235,9 +231,7 @@ const Profile = () => {
                                 <input
                                   type="text"
                                   autoComplete="new-password"
-                                  className="w-full border border-gray-150 py-1 focus:border
-                        focus:outline-none focus:border-sky-200 focus:ring-1 focus:ring-sky-500
-                        disabled:bg-gray-50 "
+                                  className="w-full px-2 py-1 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                                   name="address"
                                   value={address}
                                   onChange={onChange}
@@ -278,9 +272,7 @@ const Profile = () => {
                                 <input
                                   type="url"
                                   autoComplete="new-password"
-                                  className="w-full border border-gray-150 py-1 focus:border
-                                  focus:outline-none focus:border-sky-200 focus:ring-1 focus:ring-sky-500
-                                  disabled:bg-gray-50 "
+                                  className="w-full px-2 py-1 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-200"
                                   name="ProfileURL"
                                   value={ProfileURL}
                                   onChange={onChange}
