@@ -1,19 +1,22 @@
 import { useState , useEffect, useContext} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../context/auth/AuthContext"
+import InlineLoadingGear from "../../components/loaders/InlineLoadingGear"
 
 const ForgotPassword = () => {
-  const { resetPassword, user} = useContext(AuthContext)
+  const { resetPassword, user, success, errors, setError, setSuccessToNull, loading, setLoading} = useContext(AuthContext)
   const navigate = useNavigate()
 
   const [email, setEmail] = useState("")
-  const [success, setSuccess] = useState(null)
-  const [error, setError] = useState(null)
 
 
   useEffect(() => {
     if(user){
       navigate('/')
+    }
+
+    return () =>{
+      setSuccessToNull()
     }
     
     //eslint-disable-next-line
@@ -22,38 +25,35 @@ const ForgotPassword = () => {
   
   const handlePasswordReset = async (e) =>{
     e.preventDefault()
+    setError(null)
+    setSuccessToNull()
+    setLoading(true)
     if (email === '') {
       return setError('Email field is required')
     }
-    setError(null)
-    setSuccess(null)
-    resetPassword(email).then( (response) =>{
-      setSuccess("Password reset link sent to your email")
-    }).catch((error) =>{
-        setError("Email Not Found")
-    })
+    resetPassword(email)
   }
 
 
   return (
-    <div className="container mx-auto p-8 bg-gray-100">
+    <div className="container mx-auto sm:p-8 bg-gray-100">
       <div className="flex justify-center px-6 my-12">
         <div className="w-full">
           <div className="w-full lg:w-1/3 bg-white p-5 rounded-lg lg:rounded-l-none m-auto shadow-md">
-            <div className="px-8 mb-4 text-center">
+            <div className="sm:px-8 mb-4 text-center">
               <h3 className="pt-4 mb-2 text-2xl">Forgot Your Password?</h3>
               <p className="mb-4 text-sm text-gray-700">
                 We get it, stuff happens. Just enter your email address below
                 and we'll send you a link to reset your password!
               </p>
               { success && 
-                <p className="bg-green-100 rounded-md py-2 text-center my-1 text-md text-green-500">
+                <p className="w-full bg-green-100 rounded-md p-2 text-center my-1 text-md text-green-500">
                 {success}
                 </p>
               }
-              { error && 
-                <p className="bg-red-100 rounded-md py-2 text-center my-1 text-md text-red-500">
-                { error }
+              { errors && 
+                <p className="bg-red-100 rounded-md p-2 text-center my-1 text-md text-red-500">
+                { errors }
                 </p>
               }
             </div>
@@ -74,6 +74,12 @@ const ForgotPassword = () => {
                   placeholder="Enter Email Address..."
                 />
               </div>
+              {
+                loading && <div className="w-full flex flex-col justify-center items-center">
+                  <div className="w-full text-center text-sm">Please Wait...</div>
+                  <InlineLoadingGear />
+                </div>
+              }
               <div className="mb-6 text-center">
                 <button
                   className="w-full px-4 py-2 font-bold text-white bg-red-500 rounded-full hover:bg-red-700 focus:outline-none focus:shadow-outline"
